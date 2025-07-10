@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import Hero from "./Components/Hero";
+import Navbar from "./Components/Navbar";
 
 const page = () => {
   return (
-    <div>page</div>
-  )
-}
+    <>
+      <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900">
+        <Navbar />
+        <Hero />
+      </div>
+    </>
+  );
+};
 
-export default page
+export default page;
