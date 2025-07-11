@@ -56,8 +56,10 @@ const Hero = () => {
                     {/* Right side - Image */}
                     <div className="flex-1 flex items-center justify-center relative">
                         <div className="relative w-full max-w-md">
+
                             <div className="relative z-10">
-                                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96 md:h-[500px]" />
+                                <img src="https://avatars.githubusercontent.com/u/127007350?v=4" className="bg-gray-200  rounded-xl w-full " alt="" />
+                                {/* <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96 md:h-[500px]" /> */}
                             </div>
 
                             {/* Decorative elements */}
