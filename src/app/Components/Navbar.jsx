@@ -19,10 +19,10 @@ const Navbar = () => {
             {/* Desktop Navigation */}
             <ul className="hidden md:flex gap-8">
               <li>
-                <Link href="/" className="nav-link underline-animation">Home</Link>
+                <Link href="/" className="nav-link underline-animation hover:text-indigo-400">Home</Link>
               </li>
               <li>
-                <Link href="/About" className="nav-link  underline-animation">About</Link>
+                <Link href="/About" className="nav-link  underline-animation hover:text-indigo-400">About</Link>
               </li>
               <li>
                 <Link href="/Skills" className="nav-link  underline-animation">Skills</Link>
@@ -61,9 +61,18 @@ const Navbar = () => {
           {isMenuOpen && (
             <div className="mobile-menu-overlay">
               <div className="mobile-menu-content">
+                {/* Added close button at top of mobile menu */}
+                <button
+                  className="absolute top-6 right-6 text-2xl z-50 text-white"
+                  onClick={() => setIsMenuOpen(false)}
+                  aria-label="Close menu"
+                >
+                  <FaTimes />
+                </button>
+
                 <ul className="flex flex-col items-center gap-10 text-2xl">
                   <li>
-                    <Link href="/" className="nav-link underline-animation" onClick={() => setIsMenuOpen(false)}>Home</Link>
+                    <Link href="/" className="nav-link underline-animation " onClick={() => setIsMenuOpen(false)}>Home</Link>
                   </li>
                   <li>
                     <Link href="/About" className="nav-link  underline-animation" onClick={() => setIsMenuOpen(false)}>About</Link>
@@ -100,6 +109,7 @@ const Navbar = () => {
           padding: 10px 10px;
         }
         .navbar {
+          position: relative; /* Added for z-index context */
           background: linear-gradient(
             145deg,
             rgba(20, 20, 20, 0.8),
@@ -136,7 +146,8 @@ const Navbar = () => {
           left: 0;
           width: 0;
           height: 3px;
-          background: linear-gradient(90deg, #ff8a00, #e52e71);
+          background: linear-gradient(90deg , #6366F1,#818CF8 
+);
           border-radius: 3px;
           transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
@@ -165,6 +176,7 @@ const Navbar = () => {
           width: 42px;
           height: 42px;
           transition: all 0.3s ease;
+          
         }
         
         .circle-animation::before {
@@ -180,13 +192,15 @@ const Navbar = () => {
         }
         
         .circle-animation:hover::before {
-          border-color: #e52e71;
+          border-color: #6366F1
+;
           transform: scale(1.3);
           opacity: 0.7;
         }
         
         .circle-animation:hover .icon {
-          color: #e52e71;
+          color: #6366F1
+;
           transform: scale(1.1);
         }
         
@@ -213,10 +227,11 @@ const Navbar = () => {
         }
         
         .mobile-menu-content {
+          position: relative; /* For close button positioning */
           background: rgba(10, 10, 20, 0.9);
           backdrop-filter: blur(12px);
           border-radius: 20px;
-          padding: 40px;
+          padding: 60px 40px 40px; /* Added top padding for close button */
           width: 90%;
           max-width: 500px;
           max-height: 90vh;

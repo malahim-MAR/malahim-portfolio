@@ -51,7 +51,7 @@ const Skills = () => {
         <section id="skills" className="py-20 px-4 sm:px-8  ">
             <div className="max-w-8xl mx-auto">
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4  bg-clip-text text-indigo-400">
                         Skills & Expertise
                     </h1>
                     <p className="text-gray-400 max-w-2xl mx-auto text-lg">
@@ -63,18 +63,18 @@ const Skills = () => {
                     {skillsData.map((skill) => (
                         <div
                             key={skill.id}
-                            className="skill-card relative bg-gray-800/30 backdrop-blur-lg rounded-xl p-6 border border-gray-700/50 transition-all duration-500 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10"
+                            className="skill-card relative bg-gray-800/30 backdrop-blur-lg rounded-xl p-6 border border-gray-700/50 transition-all duration-500 hover:border-cyan-500/30 hover:shadow-lg hover:shadow-cyan-500/10"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-blue-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
+                            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-teal-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
 
                             <div className="relative z-10">
                                 <div className="flex items-start mb-4">
-                                    <div className="text-3xl font-bold mr-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
+                                    <div className="text-3xl font-bold mr-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-indigo-700">
                                         0{skill.id}
                                     </div>
                                     <div>
                                         <h2 className="text-xl font-bold text-white">{skill.title}</h2>
-                                        <p className="text-sm text-purple-400 mt-1">{skill.subtitle}</p>
+                                        <p className="text-sm text-indigo-400 mt-1">{skill.subtitle}</p>
                                     </div>
                                 </div>
 
@@ -84,7 +84,7 @@ const Skills = () => {
                                     {skill.technologies.map((tech, index) => (
                                         <span
                                             key={index}
-                                            className="px-3 py-1.5 text-xs rounded-full bg-gray-800/60 text-gray-300 border border-gray-700 hover:bg-purple-900/30 hover:border-purple-500/50 hover:text-white transition-all duration-300"
+                                            className="px-3 py-1.5 text-xs rounded-full bg-gray-800/60 text-gray-300 border border-gray-700 hover:bg-cyan-900/30 hover:border-cyan-500/50 hover:text-white transition-all duration-300"
                                         >
                                             {tech}
                                         </span>
@@ -94,17 +94,17 @@ const Skills = () => {
                                 <div className="flex gap-4 items-center border-t border-gray-700/50 pt-4">
                                     <Link
                                         href="/Projects"
-                                        className="text-sm font-medium text-purple-400 hover:text-white transition-colors duration-300 relative inline-block"
+                                        className="underline-animation text-sm font-medium text-indigo-400 pb-2  transition-colors duration-300 relative inline-block"
                                     >
                                         View Projects
-                                        <span className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                                        <span className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-cyan-400 to-teal-300 transition-all duration-300 group-hover:w-full"></span>
                                     </Link>
                                     <Link
                                         href="/Contact"
-                                        className="text-sm font-medium text-purple-400 hover:text-white transition-colors duration-300 relative inline-block"
+                                        className="underline-animation text-sm font-medium text-white pb-2 hover:text-indigo-400 transition-colors duration-300 relative inline-block"
                                     >
                                         Contact Me
-                                        <span className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                                        <span className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-cyan-400 to-teal-300 transition-all duration-300 group-hover:w-full"></span>
                                     </Link>
                                 </div>
                             </div>
