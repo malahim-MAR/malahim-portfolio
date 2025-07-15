@@ -9,8 +9,8 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="parent-navbar">
-        <div className="navbar">
+      <div className="parent-navbar bg-transparent">
+        <div className="navbar bg-transparent">
           <nav className="flex justify-between items-center p-1">
             <div className="logo">
               <h1 className="text-xl font-bold">Malahim.Dev</h1>
