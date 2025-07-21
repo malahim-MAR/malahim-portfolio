@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar";
 import Skills from "./Components/Skills";
 import ProjectsSection from "./Components/ProjectsSection";
 import Service from "./Components/Service";
+import Experience from "./Components/Experience";
 
 const page = () => {
   return (
@@ -14,6 +15,7 @@ const page = () => {
         <Skills />
         <ProjectsSection />
         <Service />
+        <Experience />
       </div>
     </>
   );
